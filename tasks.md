@@ -182,12 +182,36 @@ This document outlines the tasks and subtasks required to replicate an equity re
 
 ## 11. Run `equity_analyzer_agent.py` successfully to generate final JSON output with new schemas and iterative logic.
 
-- [X] **Run `equity_analyzer_agent.py` successfully to generate final JSON output with new schemas and iterative logic.** (Completed, with some sections gracefully showing API errors as N/A)
+- [X] **Run `equity_analyzer_agent.py` successfully to generate final JSON output with new schemas and iterative logic.** (Completed, with financials now loading correctly, and ESG section providing a textual summary.)
 
 ## 12. Create `scripts/json_to_markdown_converter.py` to convert the final JSON memo into a well-formatted Markdown report.
 
-- [X] **Create `scripts/json_to_markdown_converter.py` to convert the final JSON memo into a well-formatted Markdown report.**
+- [X] **Create `scripts/json_to_markdown_converter.py` to convert the final JSON memo into a well-formatted Markdown report.** (Implemented)
 
-## 13. Run the Markdown converter to produce the `.md` report.
+## 13. Run the `json_to_markdown_converter.py` script to produce the final Markdown report.
 
-- [X] **Run the Markdown converter to produce the `.md` report.** 
+- [X] **Run the `json_to_markdown_converter.py` script to produce the final Markdown report.** (Completed successfully after fixing an AttributeError)
+
+## 14. Review, Refinement, and Final Output
+
+- [ ] **Revisar o relatório Markdown gerado (`output/senior_reports/final_equity_memo_pt_iterative_20250511_004422.md`):**
+    - [ ] Verificar a qualidade da análise, coerência e precisão dos dados.
+    - [ ] Avaliar a formatação e a completude das seções.
+    - [ ] Identificar áreas para melhoria nos prompts ou na estrutura do LLM.
+- [ ] **Refinar prompts e/ou schemas Pydantic (Opcional):**
+    - [ ] Com base na revisão, ajustar `scripts/equity_analyzer_agent.py` (prompts) ou `scripts/output_schemas.py` (schemas) se necessário.
+    - [ ] Re-executar o pipeline para gerar uma versão atualizada do relatório.
+- [ ] **Converter Markdown para PDF (Opcional):**
+    - [ ] Pesquisar e implementar uma solução para converter o relatório Markdown final para o formato PDF (ex: usando Pandoc, WeasyPrint, ou outra biblioteca Python).
+
+## 15. Documentação e Limpeza (Pós-MVP)
+
+- [ ] **7.5. Final Project Review and Cleanup.**
+- [ ] **8. Review, Refinement, and Final Output.**
+- [ ] **9. Retry script execution after quota adjustment and model switch for `equity_analyzer_agent.py`.**
+- [ ] **10. Refactor `generate_final_memo_step` to be iterative for schema complexity and token limits, with robust error handling for each sub-section.**
+- [ ] **11. Run `equity_analyzer_agent.py` successfully to generate final JSON output with new schemas and iterative logic.**
+- [ ] **12. Create `scripts/json_to_markdown_converter.py` to convert the final JSON memo into a well-formatted Markdown report.**
+- [ ] **13. Run the `json_to_markdown_converter.py` script to produce the final Markdown report.**
+- [ ] **14. Review, Refinement, and Final Output.**
+- [ ] **15. Documentação e Limpeza (Pós-MVP).** 

@@ -424,6 +424,8 @@ class EquityResearchWorkflow(Workflow):
         )
         print(f"Raw Pydantic Output for {self.taesa_name_str} (CompanyFinancialSummaryOutput):\n{output.model_dump_json(indent=2)}")
         
+        # Store in context for the comparative step
+        await ctx.set(self.taesa_name_str, output) 
         return CompanySummaryEvent(summary=output, company_name=self.taesa_name_str)
 
     @step
@@ -486,6 +488,8 @@ class EquityResearchWorkflow(Workflow):
         )
         print(f"Raw Pydantic Output for {self.engie_name_str} (CompanyFinancialSummaryOutput):\n{output.model_dump_json(indent=2)}")
         
+        # Store in context for the comparative step
+        await ctx.set(self.engie_name_str, output)
         return CompanySummaryEvent(summary=output, company_name=self.engie_name_str)
 
     @step
@@ -714,7 +718,13 @@ class EquityResearchWorkflow(Workflow):
             print(f"Generated ESG Section. Environmental: {generated_esg_section_pt.environmental_pt[:100] if generated_esg_section_pt.environmental_pt else 'N/A'}...")
         except Exception as e:
             print(f"Error generating ESG section: {e}")
-            generated_esg_section_pt = ESGSection(esg_summary_notes_pt=f"Erro ao gerar seção ESG: {e}")
+            # Fallback to a default ESGSection with error messages
+            generated_esg_section_pt = ESGSection(
+                environmental_pt=f"Erro ao gerar seção ambiental: {e}",
+                social_pt=f"Erro ao gerar seção social: {e}",
+                governance_pt=f"Erro ao gerar seção de governança: {e}",
+                esg_summary_notes_pt=f"Erro ao gerar resumo ESG: {e}"
+            )
         
         # 8. Generate Final Recommendation Summary (string)
         print("--- Generating Final Recommendation Summary ---")

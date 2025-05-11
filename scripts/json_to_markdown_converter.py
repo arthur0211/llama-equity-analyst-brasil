@@ -18,8 +18,11 @@ from scripts.output_schemas import (
 
 # --- Markdown Formatting Helper Functions ---
 
-def format_optional_str(value: Optional[str], default: str = "N/A") -> str:
-    return value if value and value.strip() and value != "#Pendente#" and not value.startswith("Erro ao gerar") else default
+def format_optional_str(value: Optional[Any], default: str = "N/A") -> str:
+    if value is None:
+        return default
+    str_value = str(value) # Ensure value is a string for strip() and startswith()
+    return str_value if str_value.strip() and str_value != "#Pendente#" and not str_value.startswith("Erro ao gerar") else default
 
 def format_list_to_markdown(items: Optional[List[str]], prefix: str = "- ") -> str:
     if not items:
