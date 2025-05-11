@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDE specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Output directories - user might want to commit example outputs, but not all runs
+# Comment out if you want to track specific outputs
+output/extracted_documents/*
+!output/extracted_documents/.gitkeep
+output/final_equity_memo_*.json
+!output/final_equity_memo_example.json 
+# output/indexes/* 
+# !output/indexes/.gitkeep
+
+# LlamaCloud specific (if any local cache or logs were to be created)
+.llamacloud/
+
+# OS specific
+.DS_Store
+Thumbs.db 

@@ -1,0 +1,86 @@
+### 1. Macroeconomic Assumptions
+
+*   **Inflation (IPCA):**
+    *   Forecast 2024: 4.10% - 4.20% (Source: Central Bank of Brazil Focus Report / Market Consensus)
+    *   Forecast 2025: 3.90% - 3.97% (Source: Central Bank of Brazil Focus Report / Market Consensus)
+    *   Long-term: 3.50% - 3.60% (Central Bank target with tolerance band of 1.5 percentage points)
+*   **Interest Rate (SELIC - Base Rate):**
+    *   Current (as of May 2025): 14.25%
+    *   Forecast Year-End 2025: 14.75% - 15.00% (Source: Central Bank of Brazil Focus Report / Market Consensus)
+    *   Forecast Year-End 2026: 12.00% - 12.50% (Source: Central Bank of Brazil Focus Report / Market Consensus)
+    *   Long-term: 9.00% - 10.00% (Based on consensus forecasts)
+*   **Brazil GDP Growth:**
+    *   2024 (Actual): 3.4% 
+    *   2025E: 1.94% - 2.23% (Market forecasts) or 2.60% (Government forecast)
+    *   Long-term: 2.00% - 2.50% (Consensus estimate)
+
+### 2. Tax Assumptions
+
+*   **Corporate Income Tax (IRPJ & CSLL):**
+    *   Standard Rate: 34% (25% IRPJ + 9% CSLL). (Source: Brazilian Tax Authorities)
+    *   Note: The energy sector may benefit from specific tax incentives for renewable energy investments, particularly SUDENE/SUDAM regional development incentives that can reduce the effective tax rate.
+
+### 3. Sector-Specific Regulatory Assumptions (ANEEL Influence)
+
+*   **Tariff Adjustments:**
+    *   Regulated revenues follow a Revenue Cap model under ANEEL supervision
+    *   Transmission companies like Taesa earn revenue based on line availability (RAP - Receita Anual Permitida) rather than volume of energy transmitted
+    *   RAP is adjusted annually for inflation (typically IPCA) and undergoes periodic reviews by ANEEL
+    *   Transmission assets operate under a price cap auction system where companies bid the lowest RAP
+*   **Concession Periods:**
+    *   New transmission concessions typically run for 30 years with possibility of renewal
+    *   Taesa's 2024-2025 Tangará Project has a RAP of R$ 109.3 million with ANEEL CAPEX of R$ 1.117 billion and a completion deadline of March 2028
+*   **Regulatory Oversight:**
+    *   Strong and stable regulatory framework governed by ANEEL, MME (Ministério de Minas e Energia), ONS (Operador Nacional do Sistema Elétrico), and CCEE (Câmara de Comercialização de Energia Elétrica)
+    *   ANEEL has been increasing the frequency of transmission auctions to stimulate development, with recent activity including Engie and Taesa winning bids in 2024
+
+### 4. Valuation Assumptions (General)
+
+*   **Weighted Average Cost of Capital (WACC) / Discount Rate:**
+    *   ANEEL-regulated WACC (post-tax) for transmission sector: 7.56% (2024)
+    *   ANEEL-regulated WACC (post-tax) for distribution sector: 7.72% (2024)
+    *   Components for company-specific WACC calculation:
+        *   Cost of Equity (Ke): Using CAPM (Risk-Free Rate, Equity Risk Premium, Beta)
+            *   Risk-Free Rate: Based on long-term Brazilian government bond yields
+            *   Equity Risk Premium (Brazil): 5.0% - 7.0% above risk-free rate
+            *   Beta (β): Consider using Taesa as a pure-play transmission company for more accurate beta estimation rather than U.S. utility portfolios
+        *   Cost of Debt (Kd): Based on company's current borrowing rates and SELIC outlook
+        *   Capital Structure: Auction projects typically assume 65% debt financing
+*   **Perpetuity Growth Rate (for DCF models):**
+    *   3.0% - 3.5% (Aligned with long-term inflation expectations)
+
+### 5. Operational Assumptions (General)
+
+*   **Asset Useful Life & Depreciation:**
+    *   ANEEL is developing specific regulations for transmission equipment with exhausted useful life (expected implementation in progress)
+    *   Transmission assets typically have 25-30+ year useful lives, aligned with concession periods
+*   **Capital Expenditures (CAPEX):**
+    *   Maintenance Capex: Usually 1-2% of asset base annually
+    *   Expansion Capex: Based on auction wins - Taesa and Engie have both secured new transmission projects in recent auctions (2024)
+    *   Taesa's Tangará Project represents R$1.117 billion in CAPEX through 2028
+    *   Engie secured a major transmission lot in 2024 requiring R$2.9 billion investment
+*   **Operating Expenses (OPEX):**
+    *   ANEEL periodically reviews the Database of Prices for transmission services, which affects cost allowances in tariff reviews
+    *   A previous database update resulted in an average reduction of 35.3% for Maneuver Modules and 21.7% for Equipment Modules
+
+### 6. Energy Transition and Future Outlook
+
+*   **Renewable Energy Integration:**
+    *   Brazil's electricity matrix is 83% renewable (compared to global average of 25%)
+    *   Regulatory frameworks being developed for energy storage, green hydrogen, and offshore wind
+    *   ANEEL opened a second phase of Public Consultation on energy storage regulation (closing January 30, 2025)
+*   **Investment Opportunities:**
+    *   Transmission expansion critical to integrate growing renewable capacity
+    *   Foreign investors view Brazilian transmission market as attractive due to growth potential and clear regulatory framework
+    *   Both Taesa and Engie continue to expand their presence through auction wins
+
+### 7. Company-Specific Considerations
+
+*   **Taesa:**
+    *   Pure-play transmission company (useful for beta calculations)
+    *   Recent project wins include the R$1.117 billion Tangará Project and a R$244 million substation project in São Paulo
+    *   Regulatory stability provides consistent cash flows
+*   **Engie:**
+    *   Diversifying presence in Brazilian energy sector
+    *   Major winner in 2024 transmission auctions with R$2.9 billion investment
+    *   Integration of renewable acquisitions into its portfolio
