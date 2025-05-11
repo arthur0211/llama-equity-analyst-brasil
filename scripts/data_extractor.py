@@ -145,6 +145,9 @@ async def extract_data_from_pdf(agent: 'LlamaExtractAgent', file_path: str, comp
                 parsed_pydantic_data = raw_extraction_result.data
                 print(f"\n**Extracted Data for {company_context} (Pydantic model):**")
                 print(parsed_pydantic_data.model_dump_json(indent=2))
+                if parsed_pydantic_data and parsed_pydantic_data.financials:
+                    print(f"\n**DEBUG: Content of parsed_pydantic_data.financials for {company_context}:**")
+                    print(json.dumps(parsed_pydantic_data.financials.model_dump(), indent=2, ensure_ascii=False))
             elif isinstance(raw_extraction_result.data, dict):
                 print(f"\n**Extracted Data for {company_context} (raw dict from agent):**")
                 print(json.dumps(raw_extraction_result.data, indent=2))
@@ -153,6 +156,9 @@ async def extract_data_from_pdf(agent: 'LlamaExtractAgent', file_path: str, comp
                     parsed_pydantic_data = BrazilianCompanyReportData(**raw_extraction_result.data)
                     print(f"\n**Successfully parsed raw dict into Pydantic model for {company_context}:**")
                     print(parsed_pydantic_data.model_dump_json(indent=2))
+                    if parsed_pydantic_data and parsed_pydantic_data.financials:
+                        print(f"\n**DEBUG: Content of parsed_pydantic_data.financials for {company_context}:**")
+                        print(json.dumps(parsed_pydantic_data.financials.model_dump(), indent=2, ensure_ascii=False))
                 except Exception as pydantic_parse_e:
                     print(f"\n**Error parsing raw dict into Pydantic model for {company_context}: {pydantic_parse_e}**")
                     # Keep parsed_pydantic_data as None
@@ -194,7 +200,7 @@ if __name__ == "__main__":
     print("--- Starting main execution block --- ")
 
     # Determine which company to process
-    COMPANY_TO_PROCESS = "TAESA" # Uncomment to process Taesa
+    COMPANY_TO_PROCESS = "ENGIE" # Uncomment to process Taesa
 
     if COMPANY_TO_PROCESS == "ENGIE":
         REPORT_PATH = os.path.join("data", "release-engie", "250507-Release-de-Resultados-1T25.pdf")
