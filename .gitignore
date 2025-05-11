@@ -26,8 +26,8 @@ output/extracted_documents/*
 !output/extracted_documents/.gitkeep
 output/final_equity_memo_*.json
 !output/final_equity_memo_example.json 
-# output/indexes/* 
-# !output/indexes/.gitkeep
+output/indexes/* 
+!output/indexes/.gitkeep
 
 # LlamaCloud specific (if any local cache or logs were to be created)
 .llamacloud/
